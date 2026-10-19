@@ -1,9 +1,9 @@
 /* 入口：建立頁面、切換日期、時鐘與倒數。只建一次畫面，切換時只顯示／隱藏，不會重新整理。 */
-import { DAYS } from './data/days.js?v=202610192118';
-import { dayHtml } from './ui/day-page.js?v=202610192118';
-import { overviewHtml } from './ui/overview.js?v=202610192118';
-import { initVjw } from './ui/vjw-card.js?v=202610192118';
-import { ARR, DEP, DEVTZ, LEAVE, RET, esc, jstNow, pad, store, toMin } from './utils.js?v=202610192118';
+import { DAYS } from './data/days.js?v=202610192120';
+import { dayHtml } from './ui/day-page.js?v=202610192120';
+import { overviewHtml } from './ui/overview.js?v=202610192120';
+import { initVjw } from './ui/vjw-card.js?v=202610192120';
+import { ARR, DEP, DEVTZ, LEAVE, RET, esc, jstNow, pad, store, toMin } from './utils.js?v=202610192120';
 
 /* ================= 組裝與切換（只建一次 DOM，切換只改 hidden） ================= */
 var app=document.getElementById('app'), nav=document.getElementById('nav');

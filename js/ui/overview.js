@@ -1,12 +1,12 @@
 /* 總覽頁：倒數、六天卡片、航班住宿、待確認清單。 */
-import { CHECKS } from '../data/checklist.js?v=202610192118';
-import { TODO } from '../data/todo.js?v=202610192118';
-import { docsCard } from './docs-card.js?v=202610192118';
-import { vjwCard } from './vjw-card.js?v=202610192118';
-import { DAYS } from '../data/days.js?v=202610192118';
-import { ART } from './art.js?v=202610192118';
-import { ferryCard } from './ferry-card.js?v=202610192118';
-import { esc, jstNow, mapUrl, store } from '../utils.js?v=202610192118';
+import { CHECKS } from '../data/checklist.js?v=202610192120';
+import { TODO } from '../data/todo.js?v=202610192120';
+import { docsCard } from './docs-card.js?v=202610192120';
+import { vjwCard } from './vjw-card.js?v=202610192120';
+import { DAYS } from '../data/days.js?v=202610192120';
+import { ART } from './art.js?v=202610192120';
+import { ferryCard } from './ferry-card.js?v=202610192120';
+import { esc, jstNow, mapUrl, store } from '../utils.js?v=202610192120';
 
 /* ================= 總覽頁 ================= */
 export function overviewHtml(){
@@ -16,7 +16,7 @@ export function overviewHtml(){
   var h='<div class="hero">'+ART.ov+'<div class="kicker">SHIKOKU FAMILY TRIP</div><h1>四國家族旅行</h1>'+
         '<p class="mood">2026.10.22（四）– 10.27（二）<br>高松・今治・道後・松山・琴平・小豆島</p>'+
         '<div class="cd" id="cd"></div>'+
-        '<div class="chips"><span class="chip">🚗 Budget 租車 VOXY</span><span class="chip">👨‍👩‍👧 4 人</span></div></div>';
+        '<div class="chips"><span class="chip">🚗 Budget 租車・ワゴン（VOXY 級）</span><span class="chip">👨‍👩‍👧 4 人</span></div></div>';
   h+='<div class="grid" style="margin-top:14px">';
   DAYS.forEach(function(d,i){
     h+='<button class="dcard dc-'+d.id+'" data-go="'+d.id+'"><div><small>DAY '+(i+1)+' · '+d.md+'（'+d.wd+'）</small><b>'+esc(d.title)+'</b></div><span>🏨 '+esc(d.stayLabel)+'</span></button>';

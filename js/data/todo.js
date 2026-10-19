@@ -5,6 +5,7 @@ export var TODO = [
    link:['https://services.digital.go.jp/visit-japan-web/','Visit Japan Web 官方說明']},
   {id:'vjw-qr', d:'2026-10-21', due:'10/21（三）前', tx:'每個人把 Visit Japan Web 的 QR Code 截圖，上傳到網站總覽頁的「Visit Japan Web QR Code」區（存在自己手機），相簿的截圖也留著。'},
   {id:'cancel', d:'2026-10-21', due:'10/21（三）', tx:'APA 和道後やや免費取消到 10/21（道後やや到日本時間 23:59）；行程確定不改就不用做任何事。'},
+  {id:'budget-ci', d:'2026-10-21', due:'10/21（三）前', tx:'Budget 租車「オンラインチェックイン」（事前報到＋付款），取車會比較快；不做也可以，就是到櫃台現場付款。在 Budget 預約 App 的預約畫面按「オンラインチェックイン」。'},
   {id:'ci-out', d:'2026-10-22', due:'10/20 14:30 起～10/22 出發前', tx:'華航 CI178 網路報到（起飛前 48 小時開放、1 小時前關閉），4 人同一筆訂位可一起報到。',
    link:['https://apps.apple.com/tw/app/%E4%B8%AD%E8%8F%AF%E8%88%AA%E7%A9%BA-app/id1093021450','中華航空 App']},
   {id:'docs-save', d:'2026-10-21', due:'出發前', tx:'把訂房憑證、船票 PDF 存進 iPhone「檔案」App（離線也能看）。'},
