@@ -67,45 +67,45 @@ export var DAYS = [
 },
 {
   id:'d3', date:'2026-10-24', md:'10/24', wd:'六', short:'松山購物',
-  title:'松山購物與燒肉百名店', mood:'仙貝、丹寧、蕎麥麵、球鞋、登山用品，晚上吃燒肉百名店。',
+  title:'松山購物與燒肉百名店', mood:'仙貝、丹寧、登山用品、球鞋、蕎麥麵，晚上吃燒肉百名店。',
   stay:'yaya', stayLabel:'道後 YAYA 飯店（續住）',
-  gmaps:['yaya','jeans','iyookina','depo','montbell','emifull','enyaki','yaya'],
+  gmaps:['yaya','jeans','montbell','depo','iyookina','emifull','enyaki','yaya'],
   route:{
     nodes:[
       {id:'dogo',ll:[132.7865,33.852],label:'道後',sub:'寺子屋・飯店',lp:'e'},
       {id:'jeans',ll:[132.760,33.893],label:'JEANS FACTORY',lp:'e'},
-      {id:'iyookina',ll:[132.722,33.792],dx:25,dy:0,label:'いよ翁',sub:'午餐',lp:'e'},
-      {id:'depo',ll:[132.727,33.812],dx:-25,dy:8,label:'On・HOKA',lp:'w'},
-      {id:'montbell',ll:[132.740,33.830],dx:40,dy:-15,label:'mont-bell',lp:'s'},
-      {id:'emifull',ll:[132.709,33.785],dx:-16,label:'エミフル・焼肉苑',sub:'購物・晚餐',lp:'s'}
+      {id:'montbell',px:[186,106],label:'mont-bell',lp:'e'},
+      {id:'depo',px:[140,150],label:'スポーツデポ',sub:'On・HOKA',lp:'w'},
+      {id:'iyookina',px:[244,146],label:'いよ翁',sub:'午餐',lp:'e'},
+      {id:'emifull',px:[162,202],label:'エミフルMASAKI',sub:'購物 4 小時',lp:'e'},
+      {id:'enyaki',px:[96,180],label:'焼肉苑',sub:'晚餐',lp:'w'}
     ],
-    labels:[[132.675,33.88,'伊予灘'],[132.78,33.775,'松山市']],
+    labels:[[132.675,33.88,'伊予灘']],
     legs:[
       {a:'dogo',b:'jeans',m:'drive',t:'25分',min:25,bend:.2},
-      {a:'jeans',b:'iyookina',m:'drive',t:'40分',min:40,bend:0.3,pp:0.25},
-      {a:'iyookina',b:'depo',m:'drive',t:'10分',min:10,bend:-0.5,pp:0.5},
-      {a:'depo',b:'montbell',m:'drive',t:'10分',min:10,bend:0.5},
-      {a:'montbell',b:'emifull',m:'drive',t:'20分',min:20,bend:0.5,pp:0.65},
-      {a:'emifull',b:'dogo',m:'drive',t:'35分',min:35,bend:-0.4,pp:0.7}
-    ],
-    extra:[{m:'drive',tx:'エミフル → 焼肉苑',tl:'開車 約 5 分',min:5}]
+      {a:'jeans',b:'montbell',m:'drive',t:'20分',min:20,bend:.2},
+      {a:'montbell',b:'depo',m:'drive',t:'10分',min:10,bend:.3,pp:.45},
+      {a:'depo',b:'iyookina',m:'drive',t:'10分',min:10,bend:.12,pp:.4},
+      {a:'iyookina',b:'emifull',m:'drive',t:'10分',min:10,bend:.1,pp:.6},
+      {a:'emifull',b:'enyaki',m:'drive',t:'5分',min:5,bend:-.2},
+      {a:'enyaki',b:'dogo',m:'drive',t:'35分',min:35,bend:-.5,pp:.62}
+    ]
   },
   items:[
     {s:'08:00',e:'09:30',k:'food',ti:'飯店早餐',n:'道後やや早餐 6:20～10:30（最後入場 10:00），招牌是現做法式吐司。'},
-    {s:'10:00',e:'10:20',k:'shop',ti:'寺子屋本舗 道後店（仙貝）',p:'terakoya',w:1,n:'10:00 開門；現烤仙貝、濕仙貝，店內有免費茶。從飯店走路過去。'},
-    {s:'10:25',e:'10:50',k:'move',ti:'開車往 JEANS FACTORY（約 25 分）'},
-    {s:'10:50',e:'11:35',k:'shop',ti:'JEANS FACTORY 松山店',p:'jeans',n:'停留 45 分鐘。'},
-    {s:'11:35',e:'12:15',k:'move',ti:'開車到 いよ翁（約 40 分）'},
-    {s:'12:15',e:'13:10',k:'food',ti:'午餐：手打ち蕎麦 いよ翁',p:'iyookina',n:'蕎麥麵百名店，週六中午可能要排隊。'},
-    {s:'13:20',e:'14:05',k:'shop',ti:'スポーツデポ松山余戸店（On・HOKA）',p:'depo',hl:1,n:'跑鞋區有 On 和 HOKA 的品牌專區，媽媽可以試穿。營業 10:00～21:00。'},
-    {s:'14:15',e:'14:55',k:'shop',ti:'mont-bell 松山店',p:'montbell',n:'營業時間官網查不到，出發前確認。'},
-    {s:'14:55',e:'15:15',k:'move',ti:'開車到 エミフルMASAKI（約 20 分）'},
-    {s:'15:15',e:'18:45',k:'shop',ti:'逛 エミフルMASAKI（約 3.5 小時）',p:'emifull',n:'2 樓 ABC-MART GRAND STAGE 也有 HOKA。午餐在外面吃過，這段全部是逛街時間。'},
-    {s:'19:00',e:'20:30',k:'food',ti:'晚餐：焼肉苑（燒肉百名店）',p:'enyaki',n:'離エミフル約 5 分鐘。可線上訂位，建議先訂 19:00、4 位。'},
-    {s:'20:30',e:'21:05',k:'move',ti:'開車回道後 YAYA 飯店（約 35 分）'},
-    {s:'21:10',e:'21:40',k:'grape',ti:'買晴王葡萄',p:'fujidogo',w:1,n:'營業時間未確認，太晚就改隔天。'}
+    {s:'10:00',e:'10:15',k:'shop',ti:'寺子屋本舗 道後店（仙貝）',p:'terakoya',w:1,n:'10:00 開門；現烤仙貝、濕仙貝，店內有免費茶。從飯店走路過去。'},
+    {s:'10:15',e:'10:40',k:'move',ti:'開車往 JEANS FACTORY（約 25 分）'},
+    {s:'10:40',e:'11:25',k:'shop',ti:'JEANS FACTORY 松山店',p:'jeans',n:'停留 45 分鐘。'},
+    {s:'11:25',e:'11:45',k:'move',ti:'開車到 mont-bell（約 20 分）'},
+    {s:'11:45',e:'12:20',k:'shop',ti:'mont-bell 松山店',p:'montbell',n:'營業時間官網查不到，出發前確認。'},
+    {s:'12:30',e:'13:10',k:'shop',ti:'スポーツデポ松山余戸店（On・HOKA）',p:'depo',hl:1,n:'跑鞋區有 On 和 HOKA 的品牌專區，媽媽可以試穿。營業 10:00～21:00。'},
+    {s:'13:20',e:'14:10',k:'food',ti:'午餐：手打ち蕎麦 いよ翁',p:'iyookina',n:'蕎麥麵百名店，中午到 15:00；賣完就提早收，可以先打電話問。早餐吃飽一點。'},
+    {s:'14:20',e:'18:20',k:'shop',ti:'逛 エミフルMASAKI（4 小時）',p:'emifull',n:'2 樓 ABC-MART GRAND STAGE 也有 HOKA。'},
+    {s:'18:30',e:'20:00',k:'food',ti:'晚餐：焼肉苑（燒肉百名店）',p:'enyaki',n:'離エミフル約 5 分鐘。可線上訂位，建議先訂 18:30、4 位。'},
+    {s:'20:00',e:'20:35',k:'move',ti:'開車回道後 YAYA 飯店（約 35 分）'},
+    {s:'20:40',e:'21:10',k:'grape',ti:'買晴王葡萄',p:'fujidogo',w:1,n:'營業時間未確認，太晚就改隔天。'}
   ],
-  tips:['店與店之間的車程是依地圖距離估計，週六可能塞車；エミフル的時間可以彈性調整。','On／HOKA 尺寸與顏色庫存未確認；エミフル的 ABC-MART 也有 HOKA，可以比較後再買。','焼肉苑週二、三公休，人均約 8,000～10,000円；建議先線上訂位。','いよ翁週二公休、中午 11:00～15:00，蕎麥麵賣完就提早收。']
+  tips:['路線照地理位置繞一圈：北邊的 JEANS → 往南 mont-bell、スポーツデポ → 南邊吃午餐、逛エミフル、吃燒肉 → 回道後，不走回頭路。','店與店之間的車程是依地圖距離估計，週六可能塞車；エミフル的時間可以彈性調整。','On／HOKA 尺寸與顏色庫存未確認；エミフル的 ABC-MART 也有 HOKA，可以比較後再買。','焼肉苑週二、三公休，人均約 8,000～10,000円；建議先線上訂位。','いよ翁週二公休、中午 11:00～15:00，蕎麥麵賣完就提早收。']
 },
 {
   id:'d4', date:'2026-10-25', md:'10/25', wd:'日', short:'琴平高松',

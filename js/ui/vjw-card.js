@@ -1,5 +1,5 @@
 /* Visit Japan Web QR Code：圖片放在專案的 vjw 資料夾，publish.ps1 會自動產生清單；大家打開網站看到的都一樣。 */
-import { VJW } from '../data/vjw.js?v=202610192130';
+import { VJW } from '../data/vjw.js?v=202610192145';
 export var PEOPLE = ['Allen', 'Lica', 'Lapeark', 'Kiwi'];
 
 export function vjwCard() {
@@ -13,7 +13,6 @@ export function vjwCard() {
       '</div>';
   });
   h += '</div><ul class="vjw-tips"><li>入境時點自己的圖片放大，<b>把螢幕亮度調到最亮</b>再給機器掃。</li>' +
-    '<li>要新增或更換：把截圖傳給 Kiwi，Kiwi 放進專案的 <code>vjw</code> 資料夾（檔名用名字，例如 <code>Lica.png</code>）後執行上架，大家的手機就會一起更新。</li>' +
     '<li>網路不穩時可能載不出來，<b>相簿裡的截圖請自己也留一份</b>。</li></ul></section>';
   return h;
 }
