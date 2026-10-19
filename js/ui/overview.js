@@ -1,12 +1,12 @@
 /* 總覽頁：倒數、六天卡片、航班住宿、待確認清單。 */
-import { CHECKS } from '../data/checklist.js?v=202610192129';
-import { TODO } from '../data/todo.js?v=202610192129';
-import { docsCard } from './docs-card.js?v=202610192129';
-import { vjwCard } from './vjw-card.js?v=202610192129';
-import { DAYS } from '../data/days.js?v=202610192129';
-import { ART } from './art.js?v=202610192129';
-import { ferryCard } from './ferry-card.js?v=202610192129';
-import { esc, jstNow, mapUrl, store } from '../utils.js?v=202610192129';
+import { CHECKS } from '../data/checklist.js?v=202610192130';
+import { TODO } from '../data/todo.js?v=202610192130';
+import { docsCard } from './docs-card.js?v=202610192130';
+import { vjwCard } from './vjw-card.js?v=202610192130';
+import { DAYS } from '../data/days.js?v=202610192130';
+import { ART } from './art.js?v=202610192130';
+import { ferryCard } from './ferry-card.js?v=202610192130';
+import { esc, jstNow, mapUrl, store } from '../utils.js?v=202610192130';
 
 /* ================= 總覽頁 ================= */
 export function overviewHtml(){
