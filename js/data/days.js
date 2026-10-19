@@ -72,21 +72,21 @@ export var DAYS = [
   gmaps:['yaya','montbell','depo','iyookina','emifull','enyaki','yaya'],
   route:{
     nodes:[
-      {id:'dogo',px:[256,60],label:'道後',sub:'寺子屋・飯店',lp:'e'},
-      {id:'montbell',px:[184,104],label:'mont-bell',lp:'e'},
-      {id:'depo',px:[140,150],label:'スポーツデポ',sub:'On・HOKA',lp:'w'},
-      {id:'iyookina',px:[244,146],label:'いよ翁',sub:'午餐',lp:'e'},
-      {id:'emifull',px:[162,202],label:'エミフルMASAKI',sub:'購物 4 小時',lp:'e'},
-      {id:'enyaki',px:[96,180],label:'焼肉苑',sub:'晚餐',lp:'w'}
+      {id:'dogo',ll:[132.7865,33.852],label:'道後',sub:'寺子屋・飯店',lp:'e'},
+      {id:'montbell',ll:[132.740,33.830],label:'mont-bell',lp:'e'},
+      {id:'depo',ll:[132.727,33.812],label:'スポーツデポ',sub:'On・HOKA',lp:'e'},
+      {id:'iyookina',ll:[132.722,33.792],label:'いよ翁',sub:'午餐',lp:'e'},
+      {id:'emifull',ll:[132.709,33.785],dx:4,dy:5,label:'エミフルMASAKI',sub:'購物 4 小時',lp:'s'},
+      {id:'enyaki',ll:[132.7052,33.7889],dx:-4,dy:-5,label:'焼肉苑',sub:'晚餐',lp:'w'}
     ],
-    labels:[[132.675,33.88,'伊予灘']],
+    labels:[[132.715,33.85,'伊予灘']],
     legs:[
-      {a:'dogo',b:'montbell',m:'drive',t:'20分',min:20,bend:.3,pp:.5},
-      {a:'montbell',b:'depo',m:'drive',t:'10分',min:10,bend:.3,pp:.45},
-      {a:'depo',b:'iyookina',m:'drive',t:'10分',min:10,bend:.12,pp:.4},
-      {a:'iyookina',b:'emifull',m:'drive',t:'10分',min:10,bend:.1,pp:.6},
-      {a:'emifull',b:'enyaki',m:'drive',t:'5分',min:5,bend:-.2},
-      {a:'enyaki',b:'dogo',m:'drive',t:'35分',min:35,bend:-.55,pp:.5}
+      {a:'dogo',b:'montbell',m:'drive',t:'20分',min:20,bend:-.3,pp:.35},
+      {a:'montbell',b:'depo',m:'drive',t:'10分',min:10,bend:-.2,pp:.5},
+      {a:'depo',b:'iyookina',m:'drive',t:'10分',min:10,bend:-.2,pp:.5},
+      {a:'iyookina',b:'emifull',m:'drive',t:'10分',min:10,bend:-.3,np:1},
+      {a:'emifull',b:'enyaki',m:'drive',t:'5分',min:5,bend:0,np:1},
+      {a:'enyaki',b:'dogo',m:'drive',t:'35分',min:35,bend:-.4,pp:.3}
     ]
   },
   items:[
