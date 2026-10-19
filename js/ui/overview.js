@@ -1,5 +1,7 @@
 /* 總覽頁：倒數、六天卡片、航班住宿、待確認清單。 */
 import { CHECKS } from '../data/checklist.js';
+import { TODO } from '../data/todo.js';
+import { docsCard } from './docs-card.js';
 import { DAYS } from '../data/days.js';
 import { ART } from './art.js';
 import { ferryCard } from './ferry-card.js';
@@ -19,6 +21,16 @@ export function overviewHtml(){
     h+='<button class="dcard dc-'+d.id+'" data-go="'+d.id+'"><div><small>DAY '+(i+1)+' · '+d.md+'（'+d.wd+'）</small><b>'+esc(d.title)+'</b></div><span>🏨 '+esc(d.stayLabel)+'</span></button>';
   });
   h+='</div>';
+  var done=store.get('shikoku2026-todo')||{};
+  var left=TODO.filter(function(t){return !done[t.id];}).length;
+  h+='<div class="ogrid"><div>';
+  h+='<section class="card todo"><h2>📝 出發前要辦的事<span class="sub" id="todo-left">還剩 '+left+' 項</span></h2><ol class="checks">';
+  TODO.slice().sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0;}).forEach(function(c){
+    var st=c.d<now.date?'over':(c.d===now.date?'today':'');
+    h+='<li class="'+st+'"><label><input type="checkbox" data-store="shikoku2026-todo" data-check="'+c.id+'"'+(done[c.id]?' checked':'')+'><span class="ck-tx"><span class="due">'+esc(c.due)+'</span>'+esc(c.tx)+'</span></label>'+
+       (c.link?'<a class="todo-link" href="'+c.link[0]+'" target="_blank" rel="noopener">🔗 '+esc(c.link[1])+'</a>':'')+'</li>';
+  });
+  h+='</ol></section></div><div>'+docsCard()+'</div></div>';
   h+='<div class="ogrid"><div>';
   h+='<section class="card"><h2>✈️ 航班<span class="sub">接送看台灣時間</span></h2><dl class="kv">'+
      '<dt>去程 10/22</dt><dd><b>CI178</b> 桃園 → 高松<br>台灣 14:30 起飛・日本 18:05 抵達</dd>'+

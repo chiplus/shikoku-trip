@@ -286,3 +286,20 @@ button,a,.btn,label,summary{touch-action:manipulation}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 [hidden]{display:none!important}
+/* 票券與訂房憑證 */
+.docs .doc{display:flex;align-items:center;gap:12px;padding:12px;margin-top:10px;border:1px solid var(--line);border-radius:14px;background:var(--soft);color:var(--ink);text-decoration:none;min-height:64px}
+.doc-ic{font-size:26px;flex:0 0 auto}
+.doc-tx{flex:1;min-width:0;line-height:1.35}
+.doc-tx b{display:block;font-size:14.5px}
+.doc-tx small{display:block;font-size:12px;color:var(--muted)}
+.doc-tx em{display:inline-block;margin-top:3px;font-style:normal;font-size:11px;font-weight:700;color:var(--accent2)}
+.doc-go{flex:0 0 auto;background:var(--accent);color:var(--on);font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:999px}
+.doc-note{margin:6px 4px 0;font-size:12px;color:var(--muted)}
+.howto{margin-top:12px;border-top:1px dashed var(--line);padding-top:8px}
+.howto summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--accent);min-height:36px;display:flex;align-items:center}
+.howto ol{margin:6px 0 4px;padding-left:20px;font-size:13px}
+.howto li{margin:4px 0}
+.doc-btn{border-color:var(--accent);color:var(--accent);font-weight:700}
+/* 出發前待辦 */
+.todo .checks li{padding-bottom:4px}
+.todo-link{display:inline-flex;align-items:center;min-height:32px;margin:0 0 6px 34px;font-size:12.5px;font-weight:600;text-decoration:none}

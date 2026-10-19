@@ -5,6 +5,7 @@ import { P } from '../data/places.js';
 import { ART } from './art.js';
 import { ferryCard } from './ferry-card.js';
 import { foodHtml } from './food-card.js';
+import { docLink } from './docs-card.js';
 import { routeCard } from './route-map.js';
 import { ICON, esc, ext, mapUrl, navUrl } from '../utils.js';
 
@@ -25,7 +26,7 @@ export function eventHtml(it){
   }
   if(it.n) h+='<p class="ev-note">'+esc(it.n)+'</p>';
   if(it.p && FOOD[it.p]) h+=foodHtml(it.p);
-  if(it.p) h+='<div class="ev-btns">'+ext(mapUrl(it.p),'📍 地圖')+ext(navUrl(it.p,it.w),it.w?'🚶 步行導航':'🧭 開車導航')+(P[it.p].web?ext(P[it.p].web,esc(P[it.p].webl)):'')+'</div>';
+  if(it.p) h+='<div class="ev-btns">'+ext(mapUrl(it.p),'📍 地圖')+ext(navUrl(it.p,it.w),it.w?'🚶 步行導航':'🧭 開車導航')+(P[it.p].web?ext(P[it.p].web,esc(P[it.p].webl)):'')+(it.doc?docLink(it.doc,'📄 訂房憑證'):'')+'</div>';
   if(it.alt){
     it.alt.forEach(function(a){
       if(FOOD[a[0]]){

@@ -64,9 +64,15 @@ document.addEventListener('click',function(ev){
 document.addEventListener('change',function(ev){
   var t=ev.target;
   if(t&&t.getAttribute&&t.getAttribute('data-check')){
-    var saved=store.get('shikoku2026-checks')||{};
+    var key=t.getAttribute('data-store')||'shikoku2026-checks';
+    var saved=store.get(key)||{};
     saved[t.getAttribute('data-check')]=t.checked;
-    store.set('shikoku2026-checks',saved);
+    store.set(key,saved);
+    if(key==='shikoku2026-todo'){
+      var el=document.getElementById('todo-left'), n=0;
+      document.querySelectorAll('input[data-store="shikoku2026-todo"]').forEach(function(x){ if(!x.checked) n++; });
+      if(el) el.textContent=n?('還剩 '+n+' 項'):'全部完成 🎉';
+    }
   }
 });
 window.addEventListener('hashchange',function(){ show((location.hash||'').slice(1)); });

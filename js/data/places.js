@@ -39,6 +39,12 @@ export var P = {
   angel:    {n:'天使之路', jp:'エンジェルロード', q:'エンジェルロード 小豆島'},
   umioyaji: {n:'海おやじ', q:'海おやじ 高松'},
   skillet:  {n:'SKILLET 高松店', q:'SKILLET 高松店 香川県高松市多肥下町473-2', a:'高松市多肥下町473-2', web:'https://skillet-amp.com/', webl:'🌐 SKILLET 官網'},
+  shigematsu:{n:'重松飯店', q:'重松飯店 愛媛県今治市大正町5-4-47', a:'今治市大正町5-4-47'},
+  terakoya:{n:'寺子屋本舗 道後店', q:'寺子屋本舗 道後店 愛媛県松山市道後湯之町13-17', a:'松山市道後湯之町13-17'},
+  depo:     {n:'スポーツデポ松山余戸店', q:'スポーツデポ 松山余戸店 愛媛県松山市余戸東1-9-1', a:'松山市余戸東1-9-1', web:'https://store.alpen-group.jp/Form/RealShop/ShopDetail.aspx?rsid=7672', webl:'🌐 店鋪資訊'},
+  kinryu:   {n:'金龍園', q:'金龍園 焼肉 愛媛県松山市萱町6-97-7', a:'松山市萱町6-97-7'},
+  itoloin:  {n:'焼肉イトーロイン すき焼き亭', q:'焼肉イトーロイン すき焼き亭 香川県高松市兵庫町1-8', a:'高松市兵庫町1-8'},
+  fushiishi:{n:'スポーツデポ 高松伏石店', q:'スポーツデポ 高松伏石店 香川県高松市伏石町2138-5', a:'高松市伏石町2138-5'},
   aeon:     {n:'鎌倉パスタ（AEON 高松）', q:'鎌倉パスタ イオンモール高松', web:'https://www.aeon.jp/sc/takamatsu/', webl:'🌐 AEON MALL 官網'},
   aeonmall: {n:'AEON MALL 高松', q:'イオンモール高松', web:'https://www.aeon.jp/sc/takamatsu/', webl:'🌐 AEON MALL 官網'}
 };
