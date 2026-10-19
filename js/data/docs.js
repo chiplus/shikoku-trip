@@ -1,5 +1,11 @@
 /* 票券與訂房憑證：PDF 原檔，點開即可看（未加密）。 */
 export var DOCS = [
+  {id:'apa', icon:'🛬', title:'APA 高松空港 訂房憑證', sub:'Agoda・10/22–10/23・雙床房 2 間・4 位大人',
+   file:'docs/apa-takamatsu-airport.pdf', when:'10/22 入住時出示',
+   note:'入住需出示訂房人護照，可能也要出示付款的信用卡；住宿稅現場另付。方案沒有寫含早餐。'},
+  {id:'yaya', icon:'♨️', title:'道後やや 訂房確認函', sub:'樂天旅遊・10/23–10/25・和洋室・4 位大人・含早餐',
+   file:'docs/dogo-yaya.pdf', when:'10/23 入住時出示（15:00～24:00）',
+   note:'到店付款：入住時要付清房費（金額見確認函）。退房 10/25 11:00。'},
   {id:'fav', icon:'🏨', title:'FAV 高松 訂房憑證', sub:'Agoda・10/25–10/27・日式家庭房・4 位大人',
    file:'docs/fav-takamatsu.pdf', when:'10/25 入住時出示',
    note:'入住需出示訂房人護照，可能也要出示付款的信用卡；住宿稅現場另付。'},

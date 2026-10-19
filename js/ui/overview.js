@@ -1,11 +1,12 @@
 /* 總覽頁：倒數、六天卡片、航班住宿、待確認清單。 */
-import { CHECKS } from '../data/checklist.js?v=202610191735';
-import { TODO } from '../data/todo.js?v=202610191735';
-import { docsCard } from './docs-card.js?v=202610191735';
-import { DAYS } from '../data/days.js?v=202610191735';
-import { ART } from './art.js?v=202610191735';
-import { ferryCard } from './ferry-card.js?v=202610191735';
-import { esc, jstNow, mapUrl, store } from '../utils.js?v=202610191735';
+import { CHECKS } from '../data/checklist.js?v=202610192118';
+import { TODO } from '../data/todo.js?v=202610192118';
+import { docsCard } from './docs-card.js?v=202610192118';
+import { vjwCard } from './vjw-card.js?v=202610192118';
+import { DAYS } from '../data/days.js?v=202610192118';
+import { ART } from './art.js?v=202610192118';
+import { ferryCard } from './ferry-card.js?v=202610192118';
+import { esc, jstNow, mapUrl, store } from '../utils.js?v=202610192118';
 
 /* ================= 總覽頁 ================= */
 export function overviewHtml(){
@@ -21,6 +22,7 @@ export function overviewHtml(){
     h+='<button class="dcard dc-'+d.id+'" data-go="'+d.id+'"><div><small>DAY '+(i+1)+' · '+d.md+'（'+d.wd+'）</small><b>'+esc(d.title)+'</b></div><span>🏨 '+esc(d.stayLabel)+'</span></button>';
   });
   h+='</div>';
+  h+=vjwCard();
   var done=store.get('shikoku2026-todo')||{};
   var left=TODO.filter(function(t){return !done[t.id];}).length;
   h+='<div class="ogrid"><div>';

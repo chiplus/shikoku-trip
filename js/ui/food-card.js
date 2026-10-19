@@ -1,6 +1,6 @@
 /* 餐廳卡片的畫面。 */
-import { FOOD } from '../data/food.js?v=202610191735';
-import { esc } from '../utils.js?v=202610191735';
+import { FOOD } from '../data/food.js?v=202610192118';
+import { esc } from '../utils.js?v=202610192118';
 
 export function foodHtml(k){
   var f=FOOD[k]; if(!f) return '';
@@ -13,7 +13,7 @@ export function foodHtml(k){
     h+='<li><div class="d1">'+(i===0?'<em>推薦</em>':'')+'<span class="jp">'+esc(d[0])+'</span>'+pr+'</div><div class="d2"><strong>'+esc(d[1])+'</strong>｜'+esc(d[2])+'</div></li>';
   });
   h+='</ul><p class="taste">'+esc(f.taste)+'</p>';
-  if(f.meta.length){h+='<div class="fmeta">';f.meta.forEach(function(m){h+='<span>'+esc(m)+'</span>';});h+='</div>';}
+  if(f.meta.length||f.rate){h+='<div class="fmeta">'+(f.rate?'<span class="frate">⭐ Tabelog '+esc(f.rate)+'</span>':'');f.meta.forEach(function(m){h+='<span>'+esc(m)+'</span>';});h+='</div>';}
   if(f.tip) h+='<p class="ftip">💡 '+esc(f.tip)+'</p>';
   var rb='';
   if(f.rsv) rb+='<a class="frsv" href="'+f.rsv[0]+'" target="_blank" rel="noopener">📅 '+esc(f.rsv[1])+'</a>';

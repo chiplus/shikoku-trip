@@ -303,3 +303,22 @@ button,a,.btn,label,summary{touch-action:manipulation}
 /* 出發前待辦 */
 .todo .checks li{padding-bottom:4px}
 .todo-link{display:inline-flex;align-items:center;min-height:32px;margin:0 0 6px 34px;font-size:12.5px;font-weight:600;text-decoration:none}
+.fmeta .frate{background:#fff4d6;color:#8a5a00;font-weight:700}
+/* Visit Japan Web QR Code */
+.vjw-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (min-width:740px){.vjw-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.vjw-p{border:1px solid var(--line);border-radius:14px;padding:10px;background:var(--soft);display:flex;flex-direction:column;gap:8px}
+.vjw-p.has{background:var(--card);border-color:var(--accent)}
+.vjw-name{font-weight:800;font-size:15px}
+.vjw-thumb{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;width:100%;border:1px dashed var(--line);border-radius:10px;background:#fff;padding:4px;cursor:pointer;overflow:hidden}
+.vjw-p.has .vjw-thumb{border-style:solid}
+.vjw-thumb img{width:100%;height:100%;object-fit:contain}
+.vjw-empty{font-size:12px;color:var(--muted)}
+.vjw-act{display:flex;gap:6px;flex-wrap:wrap}
+.vjw-act .btn{flex:1;justify-content:center;font-size:12.5px;padding:6px 8px;white-space:nowrap}
+.vjw-up{background:var(--accent);border-color:var(--accent);color:var(--on);font-weight:700}
+.vjw-tips{margin:10px 0 0;padding-left:18px;font-size:12.5px;color:var(--muted)}
+.vjw-tips li{margin:3px 0}
+.vjw-viewer{position:fixed;inset:0;z-index:100;background:#fff;display:flex;flex-direction:column;padding:calc(10px + env(safe-area-inset-top)) 12px calc(12px + env(safe-area-inset-bottom))}
+.vjw-vbar{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#111;font-size:16px}
+.vjw-viewer img{flex:1;min-height:0;width:100%;object-fit:contain;margin-top:10px}
