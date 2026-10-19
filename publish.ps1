@@ -17,6 +17,15 @@ Write-Host "版本號：$v"
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) { throw "找不到 git，請先安裝 Git for Windows" }
 $hasGh = [bool](Get-Command gh -ErrorAction SilentlyContinue)
 if (-not (Test-Path ".git")) { git init -b main | Out-Null }
+# 產生 Visit Japan Web QR Code 清單（vjw 資料夾裡的圖片，檔名＝名字）
+$people = @('Allen','Lica','Lapeark','Kiwi')
+$items = @()
+foreach ($p in $people) {
+  $f = Get-ChildItem -Path 'vjw' -File -ErrorAction SilentlyContinue | Where-Object { $_.BaseName -ieq $p -and $_.Extension -match '^\.(png|jpe?g|webp)$' } | Select-Object -First 1
+  if ($f) { $items += "  '$p': 'vjw/$($f.Name)?t=$($f.LastWriteTimeUtc.Ticks)'"; Write-Host "VJW QR Code：$p → $($f.Name)" }
+}
+$js = "/* 由 publish.ps1 自動產生：vjw 資料夾裡的 QR Code 圖片。請勿手改。 */`nexport var VJW = {`n" + ($items -join ",`n") + "`n};`n"
+[System.IO.File]::WriteAllText((Join-Path $PSScriptRoot 'js\data\vjw.js'), $js, (New-Object System.Text.UTF8Encoding($false)))
 git add -A
 git diff --cached --quiet
 if ($LASTEXITCODE -ne 0) { git commit -m ("更新行程網站 " + (Get-Date -Format "yyyy-MM-dd HH:mm")) | Out-Null }

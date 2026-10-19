@@ -322,3 +322,6 @@ button,a,.btn,label,summary{touch-action:manipulation}
 .vjw-viewer{position:fixed;inset:0;z-index:100;background:#fff;display:flex;flex-direction:column;padding:calc(10px + env(safe-area-inset-top)) 12px calc(12px + env(safe-area-inset-bottom))}
 .vjw-vbar{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#111;font-size:16px}
 .vjw-viewer img{flex:1;min-height:0;width:100%;object-fit:contain;margin-top:10px}
+.vjw-none{cursor:default;text-align:center}
+.vjw-hint{font-size:11.5px;color:var(--muted);text-align:center}
+.vjw-tips code{background:var(--soft);padding:0 4px;border-radius:4px;font-size:11.5px}
