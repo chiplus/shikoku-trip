@@ -1,7 +1,7 @@
 /* 船票卡片的畫面。 */
-import { FERRY } from '../data/ferry.js?v=202610192145';
-import { ext, mapUrl } from '../utils.js?v=202610192145';
-import { docLink } from './docs-card.js?v=202610192145';
+import { FERRY } from '../data/ferry.js?v=202610192147';
+import { ext, mapUrl } from '../utils.js?v=202610192147';
+import { docLink } from './docs-card.js?v=202610192147';
 
 /* ================= 船票卡 ================= */
 export function ferryCard(){
