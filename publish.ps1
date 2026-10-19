@@ -4,6 +4,16 @@
 $ErrorActionPreference = "Continue"
 $repo = "chiplus/shikoku-trip"
 Set-Location $PSScriptRoot
+# 每次上架自動換版本號，手機和平板就不會讀到舊的暫存檔
+$v = Get-Date -Format "yyyyMMddHHmm"
+$utf8 = New-Object System.Text.UTF8Encoding($false)
+$files = @(Get-ChildItem -Path "js" -Recurse -Filter "*.js") + @(Get-Item "index.html")
+foreach ($f in $files) {
+  $t = [System.IO.File]::ReadAllText($f.FullName, $utf8)
+  $n = [regex]::Replace($t, "\?v=[0-9A-Za-z]+", "?v=$v")
+  if ($n -ne $t) { [System.IO.File]::WriteAllText($f.FullName, $n, $utf8) }
+}
+Write-Host "版本號：$v"
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) { throw "找不到 git，請先安裝 Git for Windows" }
 $hasGh = [bool](Get-Command gh -ErrorAction SilentlyContinue)
 if (-not (Test-Path ".git")) { git init -b main | Out-Null }

@@ -39,9 +39,9 @@ export var DAYS = [
   gmaps:['apa','towel','shigematsu','shimonada','yaya'],
   route:{
     nodes:[
-      {id:'apa',px:[326,90],label:'APA',sub:'往高松 →',lp:'s'},
+      {id:'apa',px:[327,96],label:'APA',sub:'往高松 →',lp:'s'},
       {id:'towel',ll:[132.930,33.987],label:'今治毛巾美術館',lp:'s'},
-      {id:'shigematsu',ll:[132.996,34.058],label:'重松飯店',sub:'今治・午餐',lp:'n'},
+      {id:'shigematsu',ll:[132.996,34.058],dx:-1,dy:2,label:'重松飯店',sub:'今治・午餐',lp:'n'},
       {id:'shimonada',ll:[132.584,33.714],dx:15,dy:20,label:'下灘車站',lp:'e'},
       {id:'dogo',ll:[132.7865,33.852],label:'道後',sub:'飯店・本館・晚餐・葡萄',lp:'e'}
     ],
@@ -72,21 +72,21 @@ export var DAYS = [
   gmaps:['yaya','jeans','emifull','depo','montbell','kinryu','yaya'],
   route:{
     nodes:[
-      {id:'dogo',ll:[132.7865,33.852],label:'道後',sub:'寺子屋・飯店',lp:'s'},
-      {id:'jeans',ll:[132.760,33.893],label:'JEANS FACTORY',lp:'n'},
-      {id:'emifull',ll:[132.712,33.786],label:'エミフルMASAKI',sub:'4 小時・午餐',lp:'w'},
-      {id:'depo',ll:[132.727,33.812],px:[205,186],label:'スポーツデポ',sub:'On・HOKA',lp:'s'},
-      {id:'montbell',ll:[132.740,33.830],px:[252,160],label:'mont-bell',lp:'e'},
-      {id:'kinryu',ll:[132.752,33.851],px:[278,118],label:'金龍園',sub:'燒肉',lp:'n'}
+      {id:'dogo',ll:[132.7865,33.852],label:'道後',sub:'寺子屋・飯店',lp:'e'},
+      {id:'jeans',ll:[132.760,33.893],label:'JEANS FACTORY',lp:'e'},
+      {id:'emifull',ll:[132.712,33.786],label:'エミフルMASAKI',sub:'4 小時・午餐',lp:'e'},
+      {id:'depo',ll:[132.727,33.812],dx:-16,dy:6,label:'On・HOKA',lp:'w'},
+      {id:'montbell',ll:[132.740,33.830],dx:18,dy:4,label:'mont-bell',lp:'e'},
+      {id:'kinryu',ll:[132.752,33.851],dx:-12,dy:-8,label:'金龍園',sub:'燒肉',lp:'n'}
     ],
-    labels:[[132.675,33.88,'伊予灘'],[132.825,33.775,'松山市']],
+    labels:[[132.675,33.88,'伊予灘'],[132.785,33.80,'松山市']],
     legs:[
       {a:'dogo',b:'jeans',m:'drive',t:'25分',min:25,bend:.2},
       {a:'jeans',b:'emifull',m:'drive',t:'40分',min:40,bend:.3},
-      {a:'emifull',b:'depo',m:'drive',t:'15分',min:15,bend:-.3},
-      {a:'depo',b:'montbell',m:'drive',t:'15分',min:15,bend:.2},
-      {a:'montbell',b:'kinryu',m:'drive',t:'15分',min:15,bend:.2},
-      {a:'kinryu',b:'dogo',m:'drive',t:'25分',min:25,bend:.2}
+      {a:'emifull',b:'depo',m:'drive',t:'15分',min:15,bend:-0.6,pp:0.45},
+      {a:'depo',b:'montbell',m:'drive',t:'15分',min:15,bend:-0.5},
+      {a:'montbell',b:'kinryu',m:'drive',t:'15分',min:15,bend:0.5},
+      {a:'kinryu',b:'dogo',m:'drive',t:'25分',min:25,bend:-0.35}
     ]
   },
   items:[
