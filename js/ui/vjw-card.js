@@ -1,5 +1,5 @@
 /* Visit Japan Web QR Code：圖片放在專案的 vjw 資料夾，publish.ps1 會自動產生清單；大家打開網站看到的都一樣。 */
-import { VJW } from '../data/vjw.js?v=202610192216';
+import { VJW } from '../data/vjw.js?v=202610192231';
 export var PEOPLE = ['Allen', 'Lica', 'Lapeark', 'Kiwi'];
 
 export function vjwCard() {
