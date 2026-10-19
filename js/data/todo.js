@@ -5,6 +5,6 @@ export var TODO = [
    link:['https://services.digital.go.jp/visit-japan-web/','Visit Japan Web 官方說明']},
   {id:'ci-out', d:'2026-10-22', due:'10/20 14:30 起～10/22 出發前', tx:'華航 CI178 網路報到（起飛前 48 小時開放、1 小時前關閉），4 人同一筆訂位可一起報到。',
    link:['https://apps.apple.com/tw/app/%E4%B8%AD%E8%8F%AF%E8%88%AA%E7%A9%BA-app/id1093021450','中華航空 App']},
-  {id:'docs-save', d:'2026-10-21', due:'出發前', tx:'把訂房憑證、船票 PDF 存進 iPhone「檔案」App（離線也能看），並跟家人分享 PDF 密碼。'},
+  {id:'docs-save', d:'2026-10-21', due:'出發前', tx:'把訂房憑證、船票 PDF 存進 iPhone「檔案」App（離線也能看）。'},
   {id:'ci-back', d:'2026-10-27', due:'10/25 18:55 起（日本時間）', tx:'華航 CI179 回程網路報到（起飛前 48 小時開放）。'}
 ];

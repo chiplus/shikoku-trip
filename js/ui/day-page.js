@@ -1,13 +1,13 @@
 /* 每日頁面：時間軸與當日提醒。 */
-import { DAYS } from '../data/days.js?v=202610191732';
-import { FOOD } from '../data/food.js?v=202610191732';
-import { P } from '../data/places.js?v=202610191732';
-import { ART } from './art.js?v=202610191732';
-import { ferryCard } from './ferry-card.js?v=202610191732';
-import { foodHtml } from './food-card.js?v=202610191732';
-import { docLink } from './docs-card.js?v=202610191732';
-import { routeCard } from './route-map.js?v=202610191732';
-import { ICON, esc, ext, mapUrl, navUrl } from '../utils.js?v=202610191732';
+import { DAYS } from '../data/days.js?v=202610191735';
+import { FOOD } from '../data/food.js?v=202610191735';
+import { P } from '../data/places.js?v=202610191735';
+import { ART } from './art.js?v=202610191735';
+import { ferryCard } from './ferry-card.js?v=202610191735';
+import { foodHtml } from './food-card.js?v=202610191735';
+import { docLink } from './docs-card.js?v=202610191735';
+import { routeCard } from './route-map.js?v=202610191735';
+import { ICON, esc, ext, mapUrl, navUrl } from '../utils.js?v=202610191735';
 
 /* ================= 每日頁 ================= */
 export function eventHtml(it){

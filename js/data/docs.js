@@ -1,4 +1,4 @@
-/* 票券與訂房憑證：PDF 已加密（AES-256），密碼不寫在網站上，請跟家人私下分享。 */
+/* 票券與訂房憑證：PDF 原檔，點開即可看（未加密）。 */
 export var DOCS = [
   {id:'fav', icon:'🏨', title:'FAV 高松 訂房憑證', sub:'Agoda・10/25–10/27・日式家庭房・4 位大人',
    file:'docs/fav-takamatsu.pdf', when:'10/25 入住時出示',

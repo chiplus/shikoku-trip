@@ -23,7 +23,7 @@ shikoku-trip/
 │  │  ├─ ferry.js        渡輪船票
 │  │  └─ geo.js          路線圖底圖（自動產生，勿手改）
 │  └─ ui/                畫面元件（通常不用動）
-├─ docs/                加密過的 PDF（訂房憑證、船票），密碼不放在網站上
+├─ docs/                訂房憑證、船票 PDF（未加密，公開可下載）
 ├─ apple-touch-icon.png  iPhone「加入主畫面」的圖示
 └─ publish.ps1           一鍵上架到 GitHub
 ```
