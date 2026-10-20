@@ -1,6 +1,6 @@
 /* 餐廳卡片的畫面。 */
-import { FOOD } from '../data/food.js?v=202610202154';
-import { esc } from '../utils.js?v=202610202154';
+import { FOOD } from '../data/food.js?v=202610202206';
+import { esc } from '../utils.js?v=202610202206';
 
 export function foodHtml(k){
   var f=FOOD[k]; if(!f) return '';
