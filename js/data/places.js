@@ -22,6 +22,8 @@ export var P = {
   montbell: {n:'mont-bell 松山店', q:'モンベル 松山店 愛媛県松山市土居田町143-1', a:'松山市土居田町143-1', web:'https://store.montbell.jp/search/shopinfo/?shop_no=678511', webl:'🌐 mont-bell 松山店'},
   uotake:   {n:'道後 魚武', q:'道後 魚武 愛媛県松山市道後湯之町13-19', a:'松山市道後湯之町13-19'},
   kpark:    {n:'町営駅前停車場（琴平）', q:'琴平町営駅前駐車場'},
+  jrkoto:   {n:'JR 琴平駅', q:'JR琴平駅 香川県仲多度郡琴平町'},
+  kdkoto:   {n:'琴電琴平駅', q:'琴電琴平駅 香川県仲多度郡琴平町'},
   kudon:    {n:'こんぴらうどん 参道店', q:'こんぴらうどん 参道店 香川県仲多度郡琴平町810-3', a:'琴平町810-3'},
   shrine:   {n:'金刀比羅宮', q:'金刀比羅宮'},
   youme:    {n:'ゆめタウン高松', q:'ゆめタウン高松', web:'https://www.izumi.jp/tenpo/takamatsu', webl:'🌐 ゆめタウン官網'},
