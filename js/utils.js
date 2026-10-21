@@ -1,5 +1,5 @@
 /* 共用小工具：跳脫字元、Google 地圖連結、時間計算、本機儲存。 */
-import { P } from './data/places.js?v=202610202206';
+import { P } from './data/places.js?v=202610211511';
 
 /* ================= 工具 ================= */
 export var enc = encodeURIComponent;

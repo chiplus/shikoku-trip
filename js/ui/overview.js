@@ -1,12 +1,10 @@
-/* 總覽頁：倒數、六天卡片、航班住宿、待確認清單。 */
-import { CHECKS } from '../data/checklist.js?v=202610202206';
-import { TODO } from '../data/todo.js?v=202610202206';
-import { docsCard } from './docs-card.js?v=202610202206';
-import { vjwCard } from './vjw-card.js?v=202610202206';
-import { DAYS } from '../data/days.js?v=202610202206';
-import { ART } from './art.js?v=202610202206';
-import { ferryCard } from './ferry-card.js?v=202610202206';
-import { esc, jstNow, mapUrl, store } from '../utils.js?v=202610202206';
+/* 總覽頁：倒數、六天卡片、航班住宿、票券。 */
+import { docsCard } from './docs-card.js?v=202610211511';
+import { vjwCard } from './vjw-card.js?v=202610211511';
+import { DAYS } from '../data/days.js?v=202610211511';
+import { ART } from './art.js?v=202610211511';
+import { ferryCard } from './ferry-card.js?v=202610211511';
+import { esc, jstNow, mapUrl, store } from '../utils.js?v=202610211511';
 
 /* ================= 總覽頁 ================= */
 export function overviewHtml(){
@@ -23,16 +21,7 @@ export function overviewHtml(){
   });
   h+='</div>';
   h+=vjwCard();
-  var done=store.get('shikoku2026-todo')||{};
-  var left=TODO.filter(function(t){return !done[t.id];}).length;
-  h+='<div class="ogrid"><div>';
-  h+='<section class="card todo"><h2>📝 出發前要辦的事<span class="sub" id="todo-left">還剩 '+left+' 項</span></h2><ol class="checks">';
-  TODO.slice().sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0;}).forEach(function(c){
-    var st=c.d<now.date?'over':(c.d===now.date?'today':'');
-    h+='<li class="'+st+'"><label><input type="checkbox" data-store="shikoku2026-todo" data-check="'+c.id+'"'+(done[c.id]?' checked':'')+'><span class="ck-tx"><span class="due">'+esc(c.due)+'</span>'+esc(c.tx)+'</span></label>'+
-       (c.link?'<a class="todo-link" href="'+c.link[0]+'" target="_blank" rel="noopener">🔗 '+esc(c.link[1])+'</a>':'')+'</li>';
-  });
-  h+='</ol></section></div><div>'+docsCard()+'</div></div>';
+  h+=docsCard();
   h+='<div class="ogrid"><div>';
   h+='<section class="card"><h2>✈️ 航班<span class="sub">接送看台灣時間</span></h2><dl class="kv">'+
      '<dt>去程 10/22</dt><dd><b>CI178</b> 桃園 → 高松<br>台灣 14:30 起飛・日本 18:05 抵達</dd>'+
@@ -42,13 +31,6 @@ export function overviewHtml(){
      '<dt>10/23–24</dt><dd><a href="'+mapUrl('yaya')+'" target="_blank" rel="noopener">道後 YAYA 飯店</a>（10/25 退房）</dd>'+
      '<dt>10/25–26</dt><dd><a href="'+mapUrl('fav')+'" target="_blank" rel="noopener">FAV HOTEL TAKAMATSU</a>（15:00 入住・停車位已預約・10/27 退房）</dd></dl></section>';
   h+='</div><div>'+ferryCard()+'</div></div>';
-  var saved=store.get('shikoku2026-checks')||{};
-  h+='<section class="card"><h2>✅ 待確認清單<span class="sub">依時間排序・勾選存在這支手機</span></h2><ol class="checks">';
-  CHECKS.slice().sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0;}).forEach(function(c){
-    var st=c.d<now.date?'over':(c.d===now.date?'today':'');
-    h+='<li class="'+st+'" data-d="'+c.d+'"><label><input type="checkbox" data-check="'+c.id+'"'+(saved[c.id]?' checked':'')+'><span class="ck-tx"><span class="due">'+esc(c.due)+'</span>'+esc(c.tx)+'</span></label></li>';
-  });
-  h+='</ol></section>';
   h+='<div class="tips"><h3>📌 閱讀提醒</h3><ul>'+
      '<li>時間一律為日本時間（比台灣快 1 小時）；航班另列台灣時間。</li>'+
      '<li>這是規劃行程，不代表所有餐廳都已訂妥；交通、停留時間多為估計，依路況、天候與家人體力調整。</li>'+
