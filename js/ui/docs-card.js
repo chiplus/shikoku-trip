@@ -1,6 +1,6 @@
 /* 票券與憑證卡片：點按鈕在 iPhone 內建預覽直接開啟 PDF。 */
-import { DOCS } from '../data/docs.js?v=202610211511';
-import { esc } from '../utils.js?v=202610211511';
+import { DOCS } from '../data/docs.js?v=202610212359';
+import { esc } from '../utils.js?v=202610212359';
 
 export function docLink(id, label){
   var d=DOCS.find(function(x){return x.id===id;}); if(!d) return '';
